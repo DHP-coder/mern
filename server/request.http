@@ -1,0 +1,54 @@
+POST http://localhost:6000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "1311"
+}
+
+###
+
+POST http://localhost:6000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "phong",
+    "password": "1311"
+}
+
+
+###
+GET http://localhost:6000/api/auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDdmZWQ4NTc3NjY3NDMwZDg3OGQ5ZTAiLCJpYXQiOjE2MTkwNTMyMjd9.g3tRxlyZs15DiOSZV3GIYrJ4vMe99m--U21ZcYyE_TQ
+
+###
+POST http://localhost:6000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDgwZDNiNDM0NzI5ZTE0OTAzMTZhM2UiLCJpYXQiOjE2MTkwNTkxMzN9.5VFrUjS7MuPOAG3TApKwF4DWemB1NIpOyIQ30Ssl9Ls
+Content-Type: application/json
+
+{
+    "title": "React",
+    "description": "FE",
+    "url": "react.com",
+    "status": ""
+}
+
+###
+GET http://localhost:6000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDgwZDNiNDM0NzI5ZTE0OTAzMTZhM2UiLCJpYXQiOjE2MTkwNTg5Njl9.0ZMVC9sO6K3gm7t5zz8-b5NF4Id43-qHmQfH4-v23kg
+
+###
+PUT http://localhost:6000/api/posts/6080d38e34729e1490316a3d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDdmZWQ4NTc3NjY3NDMwZDg3OGQ5ZTAiLCJpYXQiOjE2MTkwNTYyODF9.d-Iell1g-ExBZyg4RP5LUT-CcW91epvVan7cCsuivEE
+Content-Type: application/json
+
+{
+    "title": "ReactJS done",
+    "description": "FE",
+    "url": "",
+    "status": "LEARNED"
+}
+
+###
+DELETE http://localhost:6000/api/posts/6080e1dbf1d3351c94bf5281
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDgwZDNiNDM0NzI5ZTE0OTAzMTZhM2UiLCJpYXQiOjE2MTkwNTg5Njl9.0ZMVC9sO6K3gm7t5zz8-b5NF4Id43-qHmQfH4-v23kg
